@@ -1,0 +1,22 @@
+*saveLines:         1024
+
+URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=12:antialias=true:hinting=true
+URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=12:antialias=true:hinting=true
+URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=12:antialias=true:hinting=true
+URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=12:antialias=true:hinting=true
+
+URxvt*geometry:             89x26
+URxvt*buffered:             true
+URxvt*cursorBlink:          true
+URxvt*cursorUnderlline:     false
+URxvt*internalBorder:       0
+URxvt*scrollBar:            false
+URxvt*scrollstyle:          plain
+URxvt*scrollColor:          #2873a2
+URxvt*scrollWithBuffer:     false
+URxvt*pointerBlank:         true
+URxvt*tabbed.tab-fg:        0
+URxvt*tabbed.tab-fg:        4
+URxvt*depth: 32
+
+#include ".Xresources.d/solarized"

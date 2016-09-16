@@ -1,0 +1,50 @@
+mpd() {
+
+  docker run -d \
+    -v $HOME/Music:/var/lib/mpd/music \
+    -v /tmp/mpd:/tmp/mpd \
+    --device /dev/snd \
+    -p 6600:6600 \
+    --name mpd \
+    germangb/mpd "$@"
+    
+}
+
+ncmpcpp () {
+  docker run -ti --rm \
+    -v /tmp/mpd:/tmp/mpd \
+    --rm \
+    --network host \
+    germangb/ncmpcpp
+}
+
+feh () {
+
+  docker run --rm \
+    -v $HOME/Pictures:/root \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=$DISPLAY \
+    germangb/feh "$@" 
+}
+
+firefox () {
+
+  docker run -d --rm \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/.firefox/mozilla:/root/.mozilla \
+    -v $HOME/.firefox/cache:/root/.cache \
+    -v $HOME/Downloads:/root/Downloads \
+    -e DISPLAY=$DISPLAY \
+    --name firefox \
+    --device /dev/snd \
+    --device /dev/dri \
+    germangb/firefox "$@"
+}
+
+alsamixer () {
+
+  docker run -ti --rm \
+    --device /dev/snd \
+    germangb/alsa-utils \
+    alsamixer "$@"
+}
