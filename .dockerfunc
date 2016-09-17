@@ -7,7 +7,6 @@ mpd() {
     -p 6600:6600 \
     --name mpd \
     germangb/mpd "$@"
-    
 }
 
 ncmpcpp () {
@@ -29,7 +28,7 @@ feh () {
 
 firefox () {
 
-  docker run -d --rm \
+  docker run -d \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $HOME/.firefox/mozilla:/root/.mozilla \
     -v $HOME/.firefox/cache:/root/.cache \
