@@ -1,8 +1,46 @@
+gimp () {
+
+  docker run \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/Pictures:/home/gimp/Pictures \
+    -e DISPLAY=$DISPLAY \
+    --name gimp \
+    --device /dev/dri \
+    germangb/gimp "$@"
+}
+
+#openssh () {
+#  docker run -ti --rm \
+#    --hostname $HOSTNAME \
+#    -v $HOME/.ssh:$HOME/.ssh \
+#    germangb/openssh
+#}
+#
+#ssh () {
+#  docker run -ti --rm \
+#    --hostname $HOSTNAME \
+#    -v $HOME/.ssh:$HOME/.ssh \
+#    germangb/openssh ssh "$@"
+#}
+
+cmatrix () {
+
+  docker run -ti --rm \
+    germangb/cmatrix "$@"
+}
+
 mpd() {
 
+#  docker run -d \
+#    -v $HOME/Music:/var/lib/mpd/music \
+#    -v /tmp/mpd:/tmp/mpd \
+#    --device /dev/snd \
+#    -p 6600:6600 \
+#    --name mpd \
+#    germangb/mpd "$@"
+
   docker run -d \
-    -v $HOME/Music:/var/lib/mpd/music \
-    -v /tmp/mpd:/tmp/mpd \
+    -v $HOME/Music:/home/mpd/music \
     --device /dev/snd \
     -p 6600:6600 \
     --name mpd \
@@ -23,7 +61,7 @@ feh () {
     -v $HOME/Pictures:/root \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
-    germangb/feh "$@" 
+    germangb/feh "$@"
 }
 
 firefox () {

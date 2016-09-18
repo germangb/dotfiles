@@ -2,20 +2,20 @@ set nocompatible
 
 " Plug manager
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 
-" solarized
-" set background=dark
-" colorscheme solarized
+"solarized
+"set background=dark
+"colorscheme solarized
 
-" gitgutter
+"" gitgutter
 set updatetime=250
 
-" vim config
+"" vim config
 syntax enable
 hi lineNR ctermfg=darkGrey
 hi foldcolumn ctermbg=black
@@ -26,10 +26,10 @@ hi lineNr ctermbg = 'black' ctermfg = 'green'
 " set cursorline
 " hi CursorLine cterm=NONE ctermbg = 'black'
 
-" kill the mouse
+"" kill the mouse
 set mouse=
 
-" spaces over tabs
+"" spaces over tabs
 set tabstop=2
 set softtabstop=0
 set expandtab
