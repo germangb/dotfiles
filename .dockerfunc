@@ -68,9 +68,9 @@ firefox () {
 
   docker run -d \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v $HOME/.firefox/mozilla:/root/.mozilla \
-    -v $HOME/.firefox/cache:/root/.cache \
-    -v $HOME/Downloads:/root/Downloads \
+    -v $HOME/.firefox/mozilla:/home/firefox/.mozilla \
+    -v $HOME/.firefox/cache:/home/firefox/.cache \
+    -v $HOME/Downloads:/home/firefox/Downloads \
     -e DISPLAY=$DISPLAY \
     --name firefox \
     --device /dev/snd \
