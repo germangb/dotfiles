@@ -1,3 +1,12 @@
+compton () {
+
+  docker run -d \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/.config/compton.conf:/home/compton/.config/compton.conf \
+    -e DISPLAY=$DISPLAY \
+    germangb/compton "$@"
+}
+
 scrot () {
 
   docker run \
@@ -67,7 +76,8 @@ ncmpcpp () {
 feh () {
 
   docker run --rm \
-    -v $HOME/Pictures:/root \
+    -v $HOME/Pictures:/root/Pictures \
+    -v $HOME/.wallpaper:/root/.wallpaper \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     germangb/feh "$@"
@@ -80,6 +90,7 @@ firefox () {
     -v $HOME/.firefox/mozilla:/home/firefox/.mozilla \
     -v $HOME/.firefox/cache:/home/firefox/.cache \
     -v $HOME/Downloads:/home/firefox/Downloads \
+    -v $HOME/Pictures:/home/firefox/Pictures \
     -e DISPLAY=$DISPLAY \
     --name firefox \
     --device /dev/snd \
