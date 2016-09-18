@@ -1,3 +1,12 @@
+scrot () {
+
+  docker run \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/Pictures:/home/scrot \
+    -e DISPLAY=$DISPLAY \
+    germangb/scrot "$@"
+}
+
 gimp () {
 
   docker run \
