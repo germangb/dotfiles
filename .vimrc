@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 "solarized
