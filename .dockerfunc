@@ -1,6 +1,13 @@
+gc () {
+  docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    spotify/docker-gc
+}
+
 compton () {
 
   docker run -d \
+    --device /dev/dri \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $HOME/.config/compton.conf:/home/compton/.config/compton.conf \
     -e DISPLAY=$DISPLAY \
@@ -81,6 +88,21 @@ feh () {
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     germangb/feh "$@"
+}
+
+chromium () {
+
+  #docker run -d \
+  docker run -ti \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/.chromium/cache:/home/chromium/.cache \
+    -v $HOME/Downloads:/home/chromium/Downloads \
+    -v $HOME/Pictures:/home/chromium/Pictures \
+    -e DISPLAY=$DISPLAY \
+    --name chromium \
+    --device /dev/snd \
+    --device /dev/dri \
+    germangb/chromium "$@"
 }
 
 firefox () {

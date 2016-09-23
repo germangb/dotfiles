@@ -1,21 +1,13 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
-sxhkd &
+# set colors
+bspc config normal_border_color "#002b36"
+bspc config focused_border_color "#859900"
 
-bspc config border_width         0
-bspc config window_gap          12
+bspc config border_width 2
+#bspc config top_padding 40
+bspc config window_gap 16
+bspc config split_ratio 0.5
 
-bspc config split_ratio          0.5
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config focus_by_distance    true
-bspc config history_aware_focus  true
-
-bspc monitor DP-1 -d I
-bspc monitor HDMI-0 -d II
-
-bspc rule -a Gimp desktop=^8 state=floating follow=on
-bspc rule -a Chromium desktop=^2
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# set monitors
+bspc monitor eDP1 -d I II III IV
