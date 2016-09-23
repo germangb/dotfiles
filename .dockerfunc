@@ -1,3 +1,11 @@
+docker-compose () {
+
+  docker run --rm -ti \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v $PWD:/bender:ro \
+    germangb/docker-compose "$@"
+}
+
 gc () {
   docker run --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
@@ -117,6 +125,7 @@ firefox () {
     --name firefox \
     --device /dev/snd \
     --device /dev/dri \
+    --net host \
     germangb/firefox "$@"
 }
 
