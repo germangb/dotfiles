@@ -115,17 +115,20 @@ chromium () {
 
 firefox () {
 
+  mkdir $HOME/.firefox/mozilla &> /dev/null
+  mkdir $HOME/.firefox/cache &> /dev/null
+
   docker run -d \
+    --add-host bender:172.17.0.1 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $HOME/.firefox/mozilla:/home/firefox/.mozilla \
     -v $HOME/.firefox/cache:/home/firefox/.cache \
     -v $HOME/Downloads:/home/firefox/Downloads \
     -v $HOME/Pictures:/home/firefox/Pictures \
     -e DISPLAY=$DISPLAY \
-    --name firefox \
     --device /dev/snd \
     --device /dev/dri \
-    --net host \
+    --name firefox \
     germangb/firefox "$@"
 }
 
