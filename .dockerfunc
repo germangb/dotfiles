@@ -1,16 +1,16 @@
-docker-compose () {
+#docker-compose () {
+#
+#  docker run --rm -ti \
+#    -v /var/run/docker.sock:/var/run/docker.sock \
+#    -v $PWD:/bender \
+#    germangb/docker-compose "$@"
+#}
 
-  docker run --rm -ti \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v $PWD:/bender:ro \
-    germangb/docker-compose "$@"
-}
-
-gc () {
-  docker run --rm \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    spotify/docker-gc
-}
+#gc () {
+#  docker run --rm \
+#    -v /var/run/docker.sock:/var/run/docker.sock \
+#    spotify/docker-gc
+#}
 
 compton () {
 
@@ -98,20 +98,20 @@ feh () {
     germangb/feh "$@"
 }
 
-chromium () {
-
-  #docker run -d \
-  docker run -ti \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v $HOME/.chromium/cache:/home/chromium/.cache \
-    -v $HOME/Downloads:/home/chromium/Downloads \
-    -v $HOME/Pictures:/home/chromium/Pictures \
-    -e DISPLAY=$DISPLAY \
-    --name chromium \
-    --device /dev/snd \
-    --device /dev/dri \
-    germangb/chromium "$@"
-}
+#chromium () {
+#
+#  #docker run -d \
+#  docker run -ti \
+#    -v /tmp/.X11-unix:/tmp/.X11-unix \
+#    -v $HOME/.chromium/cache:/home/chromium/.cache \
+#    -v $HOME/Downloads:/home/chromium/Downloads \
+#    -v $HOME/Pictures:/home/chromium/Pictures \
+#    -e DISPLAY=$DISPLAY \
+#    --name chromium \
+#    --device /dev/snd \
+#    --device /dev/dri \
+#    germangb/chromium "$@"
+#}
 
 firefox () {
 
@@ -120,6 +120,7 @@ firefox () {
 
   docker run -d \
     --add-host bender:172.17.0.1 \
+    --add-host localhost:172.17.0.1 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $HOME/.firefox/mozilla:/home/firefox/.mozilla \
     -v $HOME/.firefox/cache:/home/firefox/.cache \

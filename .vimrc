@@ -7,6 +7,7 @@ Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 "solarized
