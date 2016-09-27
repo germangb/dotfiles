@@ -1,3 +1,9 @@
+composer () {
+  docker run --rm \
+    -v $(pwd):/app \
+    composer/composer "$@"
+}
+
 #docker-compose () {
 
   #docker run --rm -ti \
