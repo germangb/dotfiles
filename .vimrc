@@ -37,3 +37,7 @@ set softtabstop=0
 set expandtab
 set shiftwidth=2
 set laststatus=2
+
+"" gvim
+set guioptions-=m " turn off menu bar
+set guioptions-=T " turn off toolbar
