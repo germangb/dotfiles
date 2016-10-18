@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 "solarized
@@ -16,6 +17,14 @@ call plug#end()
 
 "" gitgutter
 set updatetime=250
+
+"" nerdtree
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '+'
+let g:NERDTreeHighlightCursorline = 0
+
+map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-m> :NERDTreeFocus<CR>
 
 "" vim config
 syntax enable
@@ -37,7 +46,3 @@ set softtabstop=0
 set expandtab
 set shiftwidth=2
 set laststatus=2
-
-"" gvim
-set guioptions-=m " turn off menu bar
-set guioptions-=T " turn off toolbar
