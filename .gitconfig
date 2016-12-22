@@ -1,2 +1,2 @@
 [alias]
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  graph = log --graph --decorate --pretty=oneline --abbrev-commit
