@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run
+  dmenu_run -l 4 -p '>>>' -fn 'Ubuntu Mono derivative Powerline:style=Regular:size=14:hinting=true:antialias=true'
 
 # make sxhkd reload its configuration files:
 super + Escape

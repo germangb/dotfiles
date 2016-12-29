@@ -3,7 +3,7 @@
 #
 
 ## docker
-source ~/.dockerfunc
+#source ~/.dockerfunc
 
 ## default editor
 export EDITOR=vim
@@ -13,3 +13,11 @@ alias edvim='$EDITOR ~/.vimrc'
 alias eddocker='$EDITOR ~/.dockerfunc'
 alias edbash='$EDITOR ~/.bashrc'
 alias sobash='source ~/.bashrc'
+alias tips='$EDITOR ~/.tips'
+
+## cd alias
+alias .='cd ./' # lol
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
