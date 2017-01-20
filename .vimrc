@@ -11,6 +11,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
+Plug 'tfnico/vim-gradle'
+Plug 'rstacruz/vim-remux'
 "Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
@@ -35,7 +37,7 @@ set timeoutlen=2000
 
 "" line numbers
 map <leader>nn :set number<CR>
-map <leader>mm :set nonumber<CR>
+map <leader>NN :set nonumber<CR>
 
 "" vim config
 syntax enable
@@ -70,5 +72,14 @@ nnoremap <C-L> <C-W><C-L>
 "" javacomplete
 "autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+"" compiler
+"compiler gradle
+
+map <leader>mm :make 
+"map <leader>mr :make run<CR>
+
 set splitbelow
 set splitright
+
+"" vim-remux
+let g:remux_key = '<C-r>'
