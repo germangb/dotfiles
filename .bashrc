@@ -21,3 +21,13 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
+
+## gradle
+gradlew () {
+  if [ -e "./gradlew" ]; then
+    #echo "using wrapper"
+    ./gradlew $@
+  else
+    gradle $@
+  fi
+}

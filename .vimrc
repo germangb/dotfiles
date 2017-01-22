@@ -14,6 +14,7 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'tfnico/vim-gradle'
 Plug 'rstacruz/vim-remux'
 "Plug 'artur-shaik/vim-javacomplete2'
+Plug 'udalov/kotlin-vim'
 call plug#end()
 
 "solarized
