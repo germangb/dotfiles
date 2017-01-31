@@ -19,6 +19,7 @@ call plug#end()
 
 "solarized
 "set background=dark
+set background=light
 "colorscheme solarized
 
 "" gitgutter
@@ -46,7 +47,7 @@ hi lineNR ctermfg=darkGrey
 hi foldcolumn ctermbg=black
 hi colorcolumn ctermbg=1
 hi lineNr ctermbg = 'black' ctermfg = 'green'
-" hi NonText ctermbg = 'black'
+"hi NonText ctermbg = 'black'
 
 "" highlight search
 set hlsearch
@@ -58,11 +59,11 @@ set hlsearch
 set mouse=
 
 "" spaces over tabs
-set tabstop=2
+set tabstop=4
 set softtabstop=0
 set expandtab
-set shiftwidth=2
-set laststatus=2
+set shiftwidth=4
+set laststatus=4
 
 "" splits
 nnoremap <C-H> <C-W><C-H>
@@ -77,6 +78,8 @@ nnoremap <C-L> <C-W><C-L>
 "compiler gradle
 
 map <leader>mm :make 
+map <leader>gg :!gradle 
+map <leader>gw :!gradlew 
 "map <leader>mr :make run<CR>
 
 set splitbelow
@@ -84,3 +87,7 @@ set splitright
 
 "" vim-remux
 let g:remux_key = '<C-r>'
+
+"" cursorline
+highlight CursorLine cterm=None ctermbg=None
+set cursorline

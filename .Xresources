@@ -1,9 +1,9 @@
 *saveLines:         1024
 
-URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=12:antialias=true:hinting=true
-URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=12:antialias=true:hinting=true
-URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=12:antialias=true:hinting=true
-URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=12:antialias=true:hinting=true
+URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=14:antialias=true:hinting=true
+URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=14:antialias=true:hinting=true
+URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=14:antialias=true:hinting=true
+URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=14:antialias=true:hinting=true
 
 URxvt*geometry:             89x26
 URxvt*buffered:             true
@@ -19,4 +19,10 @@ URxvt*tabbed.tab-fg:        0
 URxvt*tabbed.tab-fg:        4
 URxvt*depth: 32
 
-#include ".Xresources.d/solarized"
+!#include ".Xresources.d/monokai.dark"
+!#include ".Xresources.d/monokai.light"
+!#include ".Xresources.d/google.dark"
+!#include ".Xresources.d/solarized.light"
+!#include ".Xresources.d/mocha.dark"
+!#include ".Xresources.d/default.dark"
+#include ".Xresources.d/bespin.dark"
