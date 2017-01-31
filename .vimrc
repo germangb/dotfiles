@@ -46,8 +46,12 @@ syntax enable
 hi lineNR ctermfg=darkGrey
 hi foldcolumn ctermbg=black
 hi colorcolumn ctermbg=1
-hi lineNr ctermbg = 'black' ctermfg = 'green'
 "hi NonText ctermbg = 'black'
+
+"" cursorline
+hi lineNr ctermbg=Black ctermfg=None
+hi CursorLine cterm=None ctermbg=Black
+set cursorline
 
 "" highlight search
 set hlsearch
@@ -77,7 +81,7 @@ nnoremap <C-L> <C-W><C-L>
 "" compiler
 "compiler gradle
 
-map <leader>mm :make 
+"map <leader>mm :make 
 map <leader>gg :!gradle 
 map <leader>gw :!gradlew 
 "map <leader>mr :make run<CR>
@@ -87,7 +91,3 @@ set splitright
 
 "" vim-remux
 let g:remux_key = '<C-r>'
-
-"" cursorline
-highlight CursorLine cterm=None ctermbg=None
-set cursorline

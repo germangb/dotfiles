@@ -25,4 +25,5 @@ URxvt*depth: 32
 !#include ".Xresources.d/solarized.light"
 !#include ".Xresources.d/mocha.dark"
 !#include ".Xresources.d/default.dark"
-#include ".Xresources.d/bespin.dark"
+!#include ".Xresources.d/bespin.dark"
+#include ".Xresources.d/trim-yer-beard"
