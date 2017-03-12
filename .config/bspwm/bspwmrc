@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 # set colors
-bspc config normal_border_color "#002b36"
-#bspc config focused_border_color "#859900"
+bspc config normal_border_color "#191716"
 bspc config focused_border_color "#000000"
 
-bspc config border_width 3
+bspc config border_width 4
 #bspc config top_padding 40
-bspc config window_gap 16
+bspc config window_gap 8
 bspc config split_ratio 0.5
 
 # set monitors

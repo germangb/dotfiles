@@ -1,11 +1,18 @@
+!xterm
+xterm*font:     *-fixed-*-*-*-18-*
+xterm*selectToClipboard: true
+xterm*internalBorder: 0
+
 *saveLines:         1024
 
-URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=14:antialias=true:hinting=true
-URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=14:antialias=true:hinting=true
-URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=14:antialias=true:hinting=true
-URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=14:antialias=true:hinting=true
+!urxvt
+URxvt*font:xft:Noto Mono:style=Regular:size=11:bold:antialias=true:hinting=full
+!URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=14:antialias=true:hinting=true
+!URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=14:antialias=true:hinting=true
+!URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=14:antialias=true:hinting=true
+!URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=14:antialias=true:hinting=true
 
-URxvt*geometry:             89x26
+URxvt*geometry:             80x26
 URxvt*buffered:             true
 URxvt*cursorBlink:          true
 URxvt*cursorUnderlline:     false
