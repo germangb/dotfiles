@@ -15,6 +15,8 @@ Plug 'udalov/kotlin-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'majutsushi/tagbar'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 "solarized
@@ -40,9 +42,14 @@ map <leader>nn :set number<CR>
 map <leader>NN :set nonumber<CR>
 
 "" tab nav
-map <leader>mm :tabprevious<CR>
-map <leader>.. :tabnext<CR>
-map <leader>kk :tabnew<CR>
+map <leader>aa :tabprevious<CR>
+map <leader>dd :tabnext<CR>
+map <leader>ww :tabnew<CR>
+map <leader>qq :tabclose<CR>
+
+"" quick resize
+nnoremap <leader>++ :res +4<CR>
+nnoremap <leader>-- :res -4<CR>
 
 "" vim config
 syntax enable
@@ -78,8 +85,8 @@ set laststatus=2
 "" splits
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+map <C-K> <C-W><C-K>
+map <C-L> <C-W><C-L>
 
 "map <leader>mm :make 
 map <leader>gg :!gradle 
@@ -100,3 +107,21 @@ highlight YcmErrorSection ctermbg=yellow ctermfg=black
 "" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='distinguished'
+
+"" window swap
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+"nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+"" ctags
+let g:tagbar_iconchars = ['+', '-']
+hi TagbarHighlight ctermbg=7 ctermfg=8
+
+"" tmuxline
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
+    \ 'space' : ' '}
