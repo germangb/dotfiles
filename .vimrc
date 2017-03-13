@@ -119,6 +119,7 @@ let g:tagbar_iconchars = ['+', '-']
 hi TagbarHighlight ctermbg=7 ctermfg=8
 
 "" tmuxline
+let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_separators = {
     \ 'left' : '',
     \ 'left_alt': '',
