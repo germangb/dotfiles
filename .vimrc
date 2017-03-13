@@ -8,12 +8,13 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-"Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'tfnico/vim-gradle'
 Plug 'rstacruz/vim-remux'
 Plug 'udalov/kotlin-vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "solarized
@@ -38,28 +39,36 @@ set timeoutlen=2000
 map <leader>nn :set number<CR>
 map <leader>NN :set nonumber<CR>
 
+"" tab nav
+map <leader>mm :tabprevious<CR>
+map <leader>.. :tabnext<CR>
+map <leader>kk :tabnew<CR>
+
 "" vim config
 syntax enable
 hi lineNR ctermfg=darkGrey
 hi foldcolumn ctermbg=black
 hi colorcolumn ctermbg=1
-hi NonText ctermbg = 'black'
+hi NonText ctermbg = 16
 
 "" cursorline
 hi lineNr ctermbg=Black ctermfg=None
 hi CursorLine cterm=None ctermbg=Black
 set cursorline
 
+"" vert split
+set fillchars+=vert:\\
+
 "" highlight search
 "set hlsearch
 
 " set cursorline
-"hi CursorLine cterm=NONE ctermbg = 'black'
+hi CursorLine cterm=NONE ctermbg = 'black'
 
 "" kill the mouse
 set mouse=
 
-"" spaces over tabs
+"" space indentation
 set expandtab
 set tabstop=2
 set softtabstop=0
@@ -87,3 +96,7 @@ let g:remux_key = '<C-r>'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 highlight YcmErrorLine ctermbg=black
 highlight YcmErrorSection ctermbg=yellow ctermfg=black
+
+"" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='distinguished'
