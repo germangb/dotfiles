@@ -1,6 +1,7 @@
 ! special
 *.foreground:   #daba8b
-*.background:   #191716
+!*.background:   #191716
+*.background:   #0f0e0d
 *.cursorColor:  #daba8b
 
 ! black

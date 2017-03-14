@@ -1,18 +1,10 @@
-!xterm
-xterm*font:     *-fixed-*-*-*-18-*
-xterm*selectToClipboard: true
-xterm*internalBorder: 0
 
-*saveLines:         1024
+URxvt*font:xft:Inconsolata\-dz for Powerline:style=dzForPowerline:size=11
+!URxvt*font:xft:Noto Mono:size=12
+!URxvt*boldFont:xft:Noto Mono:size=12:bold
 
-!urxvt
-URxvt*font:xft:Noto Mono:style=Regular:size=11:bold:antialias=true:hinting=full
-!URxvt*font:xft:Ubuntu Mono derivative Powerline:style=Regular:size=14:antialias=true:hinting=true
-!URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:style=Bold:size=14:antialias=true:hinting=true
-!URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:style=Italic:size=14:antialias=true:hinting=true
-!URxvt*boldItalicFont:xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=14:antialias=true:hinting=true
-
-URxvt*geometry:             80x26
+URxvt*saveLines:            1024
+URxvt*geometry:             75x24
 URxvt*buffered:             true
 URxvt*cursorBlink:          true
 URxvt*cursorUnderlline:     false
@@ -30,7 +22,12 @@ URxvt*depth: 32
 !#include ".Xresources.d/monokai.light"
 !#include ".Xresources.d/google.dark"
 !#include ".Xresources.d/solarized.light"
+!#include ".Xresources.d/solarized.dark"
 !#include ".Xresources.d/mocha.dark"
 !#include ".Xresources.d/default.dark"
 !#include ".Xresources.d/bespin.dark"
-#include ".Xresources.d/trim-yer-beard"
+!#include ".Xresources.d/trim-yer-beard"
+!#include ".Xresources.d/ashes.dark"
+!#include ".Xresources.d/default.dark"
+!#include ".Xresources.d/canvased"
+#include ".Xresources.d/eqie6"
