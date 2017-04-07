@@ -41,12 +41,10 @@ fi
 #terminal emulator daemon
 #urxvtd -q -o -f &
 
-xhost +
-
 # set desktop wallpaper
 #feh --bg-scale ~/.wallpaper_pixel
 #~/.wallpapers/animate.sh &
-feh --bg-scale .wallpaper
+feh --bg-fill ~/.wallpaper
 
 # set keyboard layout
 setxkbmap es

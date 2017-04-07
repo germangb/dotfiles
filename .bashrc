@@ -2,50 +2,23 @@
 # ~/.bashrc
 #
 
-## docker
-#source ~/.dockerfunc
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
-export TERM=xterm-256color
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias mp='mplayer'
+PS1='[\u@\h \W]\$ '
 
-## default editor
+# local lib
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
 export EDITOR=vim
 
-## shortcuts
+# edit config files
 alias edvim='$EDITOR ~/.vimrc'
-#alias eddocker='$EDITOR ~/.dockerfunc'
 alias edbash='$EDITOR ~/.bashrc'
 alias sobash='source ~/.bashrc'
-alias tips='$EDITOR ~/.tips'
 
-## cd alias
-alias .='cd ./' # lol
+# cd utils
 alias ..='cd ../'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .....='cd ../../../../'
-
-tfg () {
-  ssh -p 6969 tfgtts2@147.83.50.73 $@
-}
-
-## gradle
-gradlew () {
-  if [ -e "./gradlew" ]; then
-    #echo "using wrapper"
-    ./gradlew $@
-  else
-    gradle $@
-  fi
-}
-
-wwatch () {
-    while true; do
-        clear
-        $@
-        if [ "$?" -ne "0" ]; then
-            return 1
-        fi
-        sleep 1
-    done
-}

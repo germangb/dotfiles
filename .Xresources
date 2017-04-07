@@ -1,10 +1,10 @@
 
-URxvt*font:xft:Inconsolata\-dz for Powerline:style=dzForPowerline:size=11
+URxvt*font:xft:Inconsolata for Powerline:style=Medium:size=12
 !URxvt*font:xft:Noto Mono:size=12
 !URxvt*boldFont:xft:Noto Mono:size=12:bold
 
 URxvt*saveLines:            1024
-URxvt*geometry:             75x24
+URxvt*geometry:             80x25
 URxvt*buffered:             true
 URxvt*cursorBlink:          true
 URxvt*cursorUnderlline:     false
