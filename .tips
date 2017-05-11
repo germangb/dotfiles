@@ -1,6 +1,0 @@
-# TMUX
-
-## Synchronize panes
-
-  :setw synchronize-panes
-

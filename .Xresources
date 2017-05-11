@@ -16,7 +16,8 @@ URxvt*scrollWithBuffer:     false
 URxvt*pointerBlank:         true
 URxvt*tabbed.tab-fg:        0
 URxvt*tabbed.tab-fg:        4
-URxvt*depth: 32
+URxvt*depth:                32
+URxvt*fade:                 16
 
 !#include ".Xresources.d/monokai.dark"
 !#include ".Xresources.d/monokai.light"
