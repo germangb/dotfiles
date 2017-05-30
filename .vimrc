@@ -3,6 +3,7 @@ set nocompatible
 syntax enable
 set magic
 set smartcase
+
 set background=dark
 set expandtab
 set tabstop=4
@@ -11,6 +12,9 @@ set shiftwidth=4
 set laststatus=4
 set splitbelow
 set splitright
+
+hi VertSplit ctermbg=none ctermfg=2 cterm=none
+hi NonText ctermfg=4 ctermbg=none
 
 " set leader key to comma
 let mapleader=","
@@ -32,25 +36,6 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.vim/*
 " gitgutter
 Plug 'airblade/vim-gitgutter'
 set updatetime=250
-
-" airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-"set ttimeoutlen=50
-set laststatus=2
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-"let g:airline#extensions#tmuxline#enabled = 0
-"let g:airline#extensions#branch#enabled = 1
-let g:airline_theme='distinguished'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
 call plug#end()
 
