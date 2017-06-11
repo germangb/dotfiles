@@ -31,4 +31,5 @@ URxvt*fade:                 16
 !#include ".Xresources.d/ashes.dark"
 !#include ".Xresources.d/default.dark"
 !#include ".Xresources.d/canvased"
-#include ".Xresources.d/eqie6"
+!#include ".Xresources.d/eqie6"
+#include ".Xresources.d/ocean.dark"
