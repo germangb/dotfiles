@@ -48,5 +48,32 @@ Plug 'junegunn/goyo.vim'
 let g:goyo_width = 100
 map <leader>gg :Goyo<CR>
 
+" smooth scroll
+Plug 'terryma/vim-smooth-scroll'
+noremap <silent> <c-i> :call smooth_scroll#up(&scroll, 8, 2)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll, 8, 2)<CR>
+"noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+"noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_symbols = {}
+let g:airline_theme='term'
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
+let g:airline#extensions#whitespace#symbol = 'Ξ'
+let g:airline#extensions#whitespace#enabled = 0
+
+" gugitive
+Plug 'tpope/vim-fugitive'
+
+" json
+Plug 'elzr/vim-json'
+
 call plug#end()
 
