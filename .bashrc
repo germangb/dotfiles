@@ -42,3 +42,15 @@ function javaclean {
     done
     echo "+ KILLING ENDED"
 }
+
+function git() {
+    if [ "$1" == "loglive" ]; then
+        while true; do
+            clear
+            git --no-pager graph
+            sleep 1
+        done
+    else
+        /usr/bin/git "$@"
+    fi
+}
