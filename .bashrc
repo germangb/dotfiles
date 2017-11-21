@@ -48,9 +48,11 @@ function git() {
         while true; do
             clear
             git --no-pager graph
-            sleep 1
+            sleep 0.25
         done
     else
         /usr/bin/git "$@"
     fi
 }
+
+source ~/.bashrc.d/*.sh
