@@ -68,12 +68,32 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline#extensions#whitespace#symbol = 'Ξ'
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#syntastic#enabled = 1
 
 " gugitive
 Plug 'tpope/vim-fugitive'
 
 " json
 Plug 'elzr/vim-json'
+
+" syntastic
+Plug 'vim-syntastic/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+" racer
+Plug 'racer-rust/vim-racer'
+Plug 'rust-lang/rust.vim'
+set hidden
+let g:racer_cmd = "/usr/bin/racer"
+let g:racer_experimental_completer = 1
+let g:syntastic_rust_checkers = ['cargo']
 
 call plug#end()
 
