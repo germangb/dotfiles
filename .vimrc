@@ -95,5 +95,8 @@ let g:racer_cmd = "/usr/bin/racer"
 let g:racer_experimental_completer = 1
 let g:syntastic_rust_checkers = ['cargo']
 
+" clipboard
+Plug 'christoomey/vim-system-copy'
+
 call plug#end()
 
