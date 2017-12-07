@@ -33,6 +33,8 @@ URxvt*fade:                 16
 !#include ".Xresources.d/canvased"
 !#include ".Xresources.d/eqie6"
 #include ".Xresources.d/ocean.dark"
+!#include ".Xresources.d/atelierdune.dark"
+!#include ".Xresources.d/atelierforest.dark"
 
 !URxvt*transparent:          true
 !URxvt*shading:              20

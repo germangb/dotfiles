@@ -20,7 +20,6 @@ alias edbash='$EDITOR ~/.bashrc'
 alias sobash='source ~/.bashrc'
 
 alias ..='cd ../'
-#alias vi="vim"
 alias tmux="tmux -u"
 
 function gradlew {
@@ -43,16 +42,7 @@ function javaclean {
     echo "+ KILLING ENDED"
 }
 
-function git() {
-    if [ "$1" == "loglive" ]; then
-        while true; do
-            clear
-            git --no-pager graph
-            sleep 0.25
-        done
-    else
-        /usr/bin/git "$@"
-    fi
-}
+clear
 
 source ~/.bashrc.d/*.sh
+archey3

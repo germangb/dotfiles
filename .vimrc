@@ -14,7 +14,7 @@ set splitbelow
 set splitright
 
 hi VertSplit ctermbg=none ctermfg=2 cterm=none
-hi NonText ctermfg=4 ctermbg=none
+hi NonText ctermfg=6 ctermbg=none
 
 map <F6> :setlocal spell! spelllang=en<CR>
 
@@ -24,7 +24,7 @@ set timeoutlen=2000
 
 " line numbers
 hi lineNR ctermfg=darkGrey
-map <leader>nn :set invnumber<CR>
+map <leader>nn :set invrelativenumber<CR>
 set cpoptions+=n
 
 " plugins
@@ -48,17 +48,11 @@ Plug 'junegunn/goyo.vim'
 let g:goyo_width = 100
 map <leader>gg :Goyo<CR>
 
-" smooth scroll
-Plug 'terryma/vim-smooth-scroll'
-noremap <silent> <c-i> :call smooth_scroll#up(&scroll, 8, 2)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll, 8, 2)<CR>
-"noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-"noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-
 " airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
+"let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 let g:airline_theme='term'
@@ -68,7 +62,7 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline#extensions#whitespace#symbol = 'Ξ'
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#syntastic#enabled = 0
 
 " gugitive
 Plug 'tpope/vim-fugitive'
@@ -82,8 +76,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
@@ -94,6 +88,25 @@ set hidden
 let g:racer_cmd = "/usr/bin/racer"
 let g:racer_experimental_completer = 1
 let g:syntastic_rust_checkers = ['cargo']
+
+" rust formatting
+map <leader>ff :RustFmt<CR>
+
+" tmuxline
+Plug 'edkolev/tmuxline.vim'
+
+" delimitMate
+Plug 'Raimondi/delimitMate'
+
+" surround
+"Plug 'tpope/vim-surround'
+
+" conque-shell
+"Plug 'pthrasher/conqueterm-vim'
+
+" indent guides
+"Plug 'Yggdroot/indentLine'
+"let g:indentLine_char = '¦'
 
 call plug#end()
 
