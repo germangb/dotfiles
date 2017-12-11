@@ -107,6 +107,9 @@ Plug 'Raimondi/delimitMate'
 " indent guides
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_char = '¦'
+"
+" clipboard
+Plug 'christoomey/vim-system-copy'
 
 call plug#end()
 
