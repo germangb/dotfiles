@@ -19,6 +19,8 @@ URxvt*tabbed.tab-fg:        4
 URxvt*depth:                32
 URxvt*fade:                 16
 
+URxvt*perl-ext-common: default,resize-font
+
 !#include ".Xresources.d/monokai.dark"
 !#include ".Xresources.d/monokai.light"
 !#include ".Xresources.d/google.dark"
