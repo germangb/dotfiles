@@ -93,7 +93,7 @@ let g:syntastic_rust_checkers = ['cargo']
 map <leader>ff :RustFmt<CR>
 
 " tmuxline
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 
 " delimitMate
 Plug 'Raimondi/delimitMate'

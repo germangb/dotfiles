@@ -42,9 +42,8 @@ fi
 #urxvtd -q -o -f &
 
 # set desktop wallpaper
-#feh --bg-scale ~/.wallpaper_pixel
-#~/.wallpapers/animate.sh &
-feh --bg-fill ~/.wallpaper
+#feh --bg-fill ~/.wallpaper
+wal -i ~/.wal
 
 # set keyboard layout
 setxkbmap es
@@ -52,8 +51,13 @@ setxkbmap es
 # launch keystrokes
 sxhkd &
 
+/home/germangb/Projects/Bar/bar.sh &
+
 # launch compton
 compton &
+
+# redshift
+pgrep redshift &> /dev/null || redshift &> /dev/null &
 
 # bsp window manager start
 exec bspwm
