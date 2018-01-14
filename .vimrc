@@ -24,7 +24,7 @@ set timeoutlen=2000
 
 " line numbers
 hi lineNR ctermfg=darkGrey
-map <leader>nn :set invrelativenumber<CR>
+map <leader>nn :set invrelativenumber invnumber<CR>
 set cpoptions+=n
 
 " plugins
@@ -112,6 +112,9 @@ Plug 'Raimondi/delimitMate'
 
 " clipboard
 Plug 'christoomey/vim-system-copy'
+
+" Splits
+Plug 'wellle/visual-split.vim'
 
 call plug#end()
 
