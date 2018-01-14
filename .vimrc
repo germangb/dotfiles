@@ -13,7 +13,7 @@ set laststatus=4
 set splitbelow
 set splitright
 
-hi VertSplit ctermbg=none ctermfg=2 cterm=none
+hi VertSplit ctermbg=none ctermfg=6 cterm=none
 hi NonText ctermfg=6 ctermbg=none
 
 map <F6> :setlocal spell! spelllang=en<CR>
