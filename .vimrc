@@ -53,9 +53,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+"let g:airline_theme='term'
+let g:airline_theme='monochrome'
+"let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
-let g:airline_theme='term'
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
@@ -107,7 +108,8 @@ Plug 'Raimondi/delimitMate'
 " indent guides
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_char = '¦'
-"
+"let g:indentLine_color_term = 239
+
 " clipboard
 Plug 'christoomey/vim-system-copy'
 
