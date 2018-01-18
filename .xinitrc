@@ -43,21 +43,24 @@ fi
 
 # set desktop wallpaper
 #feh --bg-fill ~/.wallpaper
-wal -i ~/.wal
+feh --bg-tile ~/.wallpaper
+wal -n -i ~/.wal
 
 # set keyboard layout
 setxkbmap es
 
 # launch keystrokes
-sxhkd &
+#sxhkd &
 
-/home/germangb/Projects/Bar/bar.sh &
+#/home/germangb/Projects/Bar/bar.sh &
 
 # launch compton
-compton &
+#compton &
 
 # redshift
-pgrep redshift &> /dev/null || redshift &> /dev/null &
+#pgrep redshift &> /dev/null || redshift &> /dev/null &
+redshift -o &> /dev/null &
 
 # bsp window manager start
-exec bspwm
+#exec bspwm
+exec spectrwm
