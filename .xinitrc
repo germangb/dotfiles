@@ -50,7 +50,7 @@ wal -n -i ~/.wal
 setxkbmap es
 
 # launch keystrokes
-#sxhkd &
+sxhkd &
 
 #/home/germangb/Projects/Bar/bar.sh &
 
@@ -59,8 +59,9 @@ setxkbmap es
 
 # redshift
 #pgrep redshift &> /dev/null || redshift &> /dev/null &
-redshift -o &> /dev/null &
+#redshift -o &> /dev/null &
+redshift -O 3250 &> /dev/null &
 
 # bsp window manager start
-#exec bspwm
-exec spectrwm
+exec bspwm
+#exec spectrwm
