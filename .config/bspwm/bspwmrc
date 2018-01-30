@@ -2,12 +2,14 @@
 
 # set colors
 #bspc config normal_border_color "#111111"
-bspc config normal_border_color "#000000"
-bspc config focused_border_color "#000000"
+bspc config normal_border_color  "#000000"
+bspc config focused_border_color "#ff0000"
 
-bspc config border_width 4
-bspc config window_gap 32
-bspc config split_ratio 0.575
+#bspc config border_width 4
+bspc config border_width 1
+#bspc config window_gap 28
+bspc config window_gap 16
+bspc config split_ratio 0.6
 
 bspc config click_to_focus true
 
