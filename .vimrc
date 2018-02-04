@@ -4,6 +4,8 @@ syntax enable
 set magic
 set smartcase
 
+set mouse=a
+
 set background=dark
 set expandtab
 set tabstop=4
@@ -13,7 +15,8 @@ set laststatus=4
 set splitbelow
 set splitright
 
-hi VertSplit ctermbg=none ctermfg=6 cterm=none
+"hi VertSplit ctermbg=none ctermfg=6 cterm=none
+hi VertSplit ctermbg=16 ctermfg=13 cterm=none
 hi NonText ctermfg=6 ctermbg=none
 
 map <F6> :setlocal spell! spelllang=en<CR>
@@ -27,13 +30,17 @@ hi lineNR ctermfg=darkGrey
 map <leader>nn :set invrelativenumber invnumber<CR>
 set cpoptions+=n
 
+" vertical resize
+map <leader>v+ :vertical resize +4<CR>
+map <leader>v- :vertical resize -4<CR>
+
 " plugins
 call plug#begin('~/.vim/plugged')
 
 " ctrl+p
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_show_hidden = 1
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.vim/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.vim/*,*/target/*
 
 " gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -72,7 +79,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'elzr/vim-json'
 
 " syntastic
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -115,6 +122,9 @@ Plug 'christoomey/vim-system-copy'
 
 " Splits
 Plug 'wellle/visual-split.vim'
+
+"ale
+Plug 'w0rp/ale'
 
 call plug#end()
 
