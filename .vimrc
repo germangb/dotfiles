@@ -4,7 +4,8 @@ syntax enable
 set magic
 set smartcase
 
-set mouse=a
+"set mouse=a
+set mouse=
 
 set background=dark
 set expandtab
@@ -24,6 +25,9 @@ map <F6> :setlocal spell! spelllang=en<CR>
 " set leader key to comma
 let mapleader=","
 set timeoutlen=2000
+
+" markers
+map <leader>++ /<++><CR>
 
 " line numbers
 hi lineNR ctermfg=darkGrey
@@ -98,6 +102,7 @@ let g:racer_experimental_completer = 1
 let g:syntastic_rust_checkers = ['cargo']
 
 " rust formatting
+Plug 'rust-lang/rust.vim'
 map <leader>ff :RustFmt<CR>
 
 " tmuxline
@@ -123,8 +128,27 @@ Plug 'christoomey/vim-system-copy'
 " Splits
 Plug 'wellle/visual-split.vim'
 
-"ale
+"ALE
 Plug 'w0rp/ale'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_sign_column_always = 0
+
+" GLSL
+Plug 'tikhomirov/vim-glsl'
+
+" md table
+Plug 'dhruvasagar/vim-table-mode'
+
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+let g:UltiSnipsExandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" toml
+Plug 'cespare/vim-toml'
 
 call plug#end()
 

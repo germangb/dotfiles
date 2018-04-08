@@ -34,7 +34,8 @@ URxvt*perl-ext-common: default,resize-font
 !#include ".Xresources.d/default.dark"
 !#include ".Xresources.d/canvased"
 !#include ".Xresources.d/eqie6"
-#include ".Xresources.d/ocean.dark"
+!#include ".Xresources.d/ocean.dark"
+#include ".Xresources.d/something.dark"
 !#include ".Xresources.d/atelierdune.dark"
 !#include ".Xresources.d/atelierforest.dark"
 
