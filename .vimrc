@@ -17,7 +17,8 @@ set splitbelow
 set splitright
 
 "hi VertSplit ctermbg=none ctermfg=6 cterm=none
-hi VertSplit ctermbg=16 ctermfg=13 cterm=none
+"hi VertSplit ctermbg=16 ctermfg=13 cterm=none
+hi VertSplit ctermbg=none ctermfg=13 cterm=none
 hi NonText ctermfg=6 ctermbg=none
 
 map <F6> :setlocal spell! spelllang=en<CR>
@@ -25,6 +26,9 @@ map <F6> :setlocal spell! spelllang=en<CR>
 " set leader key to comma
 let mapleader=","
 set timeoutlen=2000
+
+" Folds
+hi Folded ctermbg=none
 
 " markers
 map <leader>++ /<++><CR>
@@ -69,7 +73,7 @@ let g:airline_theme='monochrome'
 "let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
+let g:airline_symbols.readonly = '🔒'
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline#extensions#whitespace#symbol = 'Ξ'
@@ -84,9 +88,9 @@ Plug 'elzr/vim-json'
 
 " syntastic
 "Plug 'vim-syntastic/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
@@ -104,6 +108,9 @@ let g:syntastic_rust_checkers = ['cargo']
 " rust formatting
 Plug 'rust-lang/rust.vim'
 map <leader>ff :RustFmt<CR>
+
+" rust playpen
+Plug 'mattn/webapi-vim'
 
 " tmuxline
 "Plug 'edkolev/tmuxline.vim'
@@ -140,8 +147,8 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'dhruvasagar/vim-table-mode'
 
 " snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 let g:UltiSnipsExandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -149,6 +156,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " toml
 Plug 'cespare/vim-toml'
+
+" git blame
+Plug 'zivyangll/git-blame.vim'
 
 call plug#end()
 
