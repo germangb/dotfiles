@@ -9,7 +9,7 @@ bspc config focused_border_color "#ff0000"
 bspc config border_width 1
 #bspc config window_gap 28
 bspc config window_gap 16
-bspc config split_ratio 0.6
+bspc config split_ratio 0.55
 
 bspc config click_to_focus true
 

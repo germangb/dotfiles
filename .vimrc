@@ -16,6 +16,10 @@ set laststatus=4
 set splitbelow
 set splitright
 
+" folded hl
+hi Folded ctermbg=none
+map <leader>ff vi{:fold<CR>
+
 "hi VertSplit ctermbg=none ctermfg=6 cterm=none
 hi VertSplit ctermbg=16 ctermfg=13 cterm=none
 hi NonText ctermfg=6 ctermbg=none
@@ -44,7 +48,9 @@ call plug#begin('~/.vim/plugged')
 " ctrl+p
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_show_hidden = 1
+
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.vim/*,*/target/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.vim/*
 
 " gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -101,6 +107,10 @@ let g:racer_cmd = "/usr/bin/racer"
 let g:racer_experimental_completer = 1
 let g:syntastic_rust_checkers = ['cargo']
 
+map <leader>cc :!cargo check<CR>
+map <leader>cr :!cargo run<CR>
+map <leader>ct :!cargo test<CR>
+
 " rust formatting
 Plug 'rust-lang/rust.vim'
 map <leader>ff :RustFmt<CR>
@@ -133,6 +143,9 @@ Plug 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_column_always = 0
 
+highlight ALEWarning ctermbg=none
+
+
 " GLSL
 Plug 'tikhomirov/vim-glsl'
 
@@ -149,6 +162,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " toml
 Plug 'cespare/vim-toml'
+
+" vim-markdown-preview
+Plug 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
+
+Plug 'tpope/vim-abolish'
 
 call plug#end()
 

@@ -12,7 +12,7 @@ alias grep='grep --color=auto'
 
 # local lib
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-export PATH=/opt/clion/bin:$PATH
+export PATH=$HOME/.cargo/bin:/opt/clion/bin:$PATH
 
 export EDITOR=vim
 export TERM="xterm-256color"
