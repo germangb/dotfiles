@@ -25,6 +25,11 @@ alias sobash='source ~/.bashrc'
 alias ..='cd ../'
 alias tmux="tmux -u"
 
+alias clippy='docker run --rm enric1994/clippy'
+alias _mkdir_fail='clippy It looks like you are trying to create a directory. Do you need assistance?'
+alias mkdr=_mkdir_fail
+alias mkdri=_mkdir_fail
+
 function gradlew {
     if [ -f "./gradlew" ]; then
         ./gradlew $@
@@ -48,4 +53,4 @@ function javaclean {
 clear
 
 source ~/.bashrc.d/*.sh
-archey3
+archey3 -c cyan
